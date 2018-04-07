@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/Ghost.gd" type="Script" id=1]
-[ext_resource path="res://textures/Ghost.png" type="Texture" id=2]
+[ext_resource path="res://textures/ghost.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -33,7 +33,7 @@ angular_damp = -1.0
 script = ExtResource( 1 )
 PlayerAccel = 100
 
-[node name="GhostTexture" type="Sprite" parent="Ghost" index="0"]
+[node name="ghost" type="Sprite" parent="Ghost" index="0"]
 
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]

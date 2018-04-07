@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/Fireboy.gd" type="Script" id=1]
-[ext_resource path="res://textures/Fireboi.png" type="Texture" id=2]
+[ext_resource path="res://textures/fire.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="FireboyNode" type="Node2D"]
+[node name="FireboyNode" type="Node2D" index="0"]
 
 [node name="Fireboy" type="RigidBody2D" parent="." index="0"]
 
@@ -33,13 +33,13 @@ angular_damp = -1.0
 script = ExtResource( 1 )
 PlayerAccel = 100
 
-[node name="Fireboi" type="Sprite" parent="Fireboy" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fireboy" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="fire" type="Sprite" parent="Fireboy" index="1"]
 
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fireboy" index="1"]
-
-shape = SubResource( 1 )
 
 

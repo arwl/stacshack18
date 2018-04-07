@@ -3,7 +3,7 @@
 [ext_resource path="res://textures/meadow.png" type="Texture" id=1]
 [ext_resource path="res://scripts/WorldBuilder.gd" type="Script" id=2]
 
-[node name="Game" type="Node2D" index="0"]
+[node name="Game" type="Node2D"]
 
 [node name="meadow" type="Sprite" parent="." index="0"]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/Hulk.gd" type="Script" id=1]
-[ext_resource path="res://textures/Hulk.png" type="Texture" id=2]
+[ext_resource path="res://textures/smash.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -33,13 +33,13 @@ angular_damp = -1.0
 script = ExtResource( 1 )
 PlayerAccel = 100
 
-[node name="HulkTexture" type="Sprite" parent="Hulk" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hulk" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="smash" type="Sprite" parent="Hulk" index="1"]
 
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hulk" index="1"]
-
-shape = SubResource( 1 )
 
 

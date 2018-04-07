@@ -18,7 +18,8 @@ func _ready():
 func setup_board():
 	place_ext_walls(480, 24)
 	place_players(4, 120, 600)
-	place_walls(20)
+	#place_walls(20)
+	place_wall_length(20, 20, 3, "h")
 	
 
 func place_players(numPlayers, leftEdge, rightEdge):
@@ -58,7 +59,15 @@ func place_ext_walls(boardSize, wallSize):
 		
 	
 
-#func place_length_wall(x, y, length, horv):
+func place_wall_length(x, y, length, hOrV):
+	x += 120
+	y += 120
+	for x in range (length):
+		place_wall(x, y, "obstacle")
+		if (hOrV == "h"):
+			x += 24
+		else:
+			y += 24
 
 func place_wall(x, y, type):
 	var wallScene
@@ -73,4 +82,6 @@ func place_wall(x, y, type):
 	
 func place_walls(numWalls):
 	for x in range (numWalls):
-		place_wall(randi()%468+128, randi()%468+128, "obstacle")
+		randomize()
+		place_wall(rand_range(128, 600), rand_range(128,600), "obstacle")
+		#place_wall(randi()%468+128, randi()%468+128, "obstacle")
