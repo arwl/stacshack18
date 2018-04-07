@@ -17,15 +17,32 @@ func _ready():
 
 func setup_board():
 	place_ext_walls(480, 24)
-	place_players(1)
+	place_players(4, 120, 600)
 	place_walls(20)
 	
 
-func place_players(numPlayers):
-	place_player(560, 560)
+func place_players(numPlayers, leftEdge, rightEdge):
+	# number of players should be between 1 and 4
+	match (numPlayers):
+		4:
+			place_player(rightEdge-40, rightEdge-40, "Hulk")
+			place_player(leftEdge+40, rightEdge-40, "Ghost")
+			place_player(rightEdge-40, leftEdge+40, "Bombman")
+			place_player(leftEdge+40, leftEdge+40, "Fireboy")
+		3:
+			place_player(leftEdge+40, rightEdge-40, "Player")
+			place_player(rightEdge-40, leftEdge+40, "Player")
+			place_player(leftEdge+40, leftEdge+40, "Player")
+		2:
+			place_player(rightEdge-40, leftEdge+40, "Player")
+			place_player(leftEdge+40, rightEdge-40, "Player")
+		1:
+			place_player(leftEdge+40, leftEdge+40, "Hulk")
+		_:
+			print("invalid number of players. should be between 1 and 4")
 
-func place_player(x, y):
-	var playerScene = load("res://_scenes/Player.tscn")
+func place_player(x, y, character):
+	var playerScene = load("res://_scenes/" + character + ".tscn")
 	var player = playerScene.instance()
 	player.translate(Vector2(x,y))
 	get_node(".").call_deferred("add_child", player)
@@ -33,22 +50,27 @@ func place_player(x, y):
 func place_ext_walls(boardSize, wallSize):
 	for x in range(boardSize/wallSize):
 		# walls along top and bottom
-		place_wall((x*(wallSize))+132, 108)
-		place_wall((x*(wallSize))+132, 612)
+		place_wall((x*(wallSize))+132, 108, "ext")
+		place_wall((x*(wallSize))+132, 612, "ext")
 		# walls along left and right
-		place_wall(108, (x*(wallSize))+132)
-		place_wall(612, (x*(wallSize))+132)
+		place_wall(108, (x*(wallSize))+132, "ext")
+		place_wall(612, (x*(wallSize))+132, "ext")
 		
 	
 
 #func place_length_wall(x, y, length, horv):
 
-func place_wall(x, y):
-	var wallScene = load("res://_scenes/Wall.tscn")
+func place_wall(x, y, type):
+	var wallScene
+	match (type):
+		"obstacle":
+			wallScene = load("res://_scenes/Wall.tscn")
+		"ext":
+			wallScene = load("res://_scenes/ExtWall.tscn")
 	var wall = wallScene.instance()
 	wall.translate(Vector2(x,y))
 	get_node(".").call_deferred("add_child", wall)
 	
 func place_walls(numWalls):
 	for x in range (numWalls):
-		place_wall(randi()%468+128, randi()%468+128)
+		place_wall(randi()%468+128, randi()%468+128, "obstacle")
