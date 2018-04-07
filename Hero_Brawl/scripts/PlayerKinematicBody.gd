@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 # Members
-export var PlayerAccel = 100
+export var PlayerAccel = 200
 export var PlayerAccelDrag = 0.5
 export var PlayerTurn = 0.1
 export var PlayerTurnDrag = 0.1
@@ -25,37 +25,31 @@ func _process(delta):
 		
 	
 func motion(delta):	
-	move_and_collide(joyMotion(delta))
+	move_and_slide(joyMotion(delta))
 	
 func joyMotion(delta):
 	var force = Vector2(0,0)
 	
-	if Input.get_joy_axis(0, 0) != 0 && Input.get_joy_axis(0, 1) != 0:
+	var lh = Input.get_joy_axis(0, 0)
+	var lv = Input.get_joy_axis(0, 1)
+	if deadzone(lh, lv):
 		force = Vector2(Input.get_joy_axis(0, 0), Input.get_joy_axis(0, 1)) * PlayerAccel
 		
 	var rotationVector
 	rotationVector = Vector2(Input.get_joy_axis(0, 0), Input.get_joy_axis(0, 1))
 	
-	rotation = -(atan2(Input.get_joy_axis(0, 2), Input.get_joy_axis(0, 3)))
+	var rh = Input.get_joy_axis(0, 3)
+	var rv = Input.get_joy_axis(0, 2)
+	if deadzone(rh, rv):
+		rotation = (atan2(rh, rv) + PI / 2)
 	
 	return force * delta
 		
-func keyboardMotion(delta):
-	var force = Vector2(0,0)
+func deadzone(lr, ud):
+	return (lr * lr + ud * ud) > 0.1
+		
 	
-	if Input.is_key_pressed(KEY_RIGHT):
-		force = Vector2(PlayerAccel, 0)
-	elif Input.is_key_pressed(KEY_LEFT):
-		force = Vector2(-PlayerAccel, 0)
-	elif Input.is_key_pressed(KEY_UP):
-		force = Vector2(0, -PlayerAccel)
-	elif Input.is_key_pressed(KEY_DOWN):
-		force = Vector2(0, PlayerAccel)
-	else:
-		force = Vector2(0, 0)
-	var motion = force * delta
 	
-	return motion
 	
 func attack():
 	pass
