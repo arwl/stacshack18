@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 # Members
-export var PlayerAccel = 200
+export var PlayerAccel = 100
 export var PlayerAccelDrag = 0.5
 export var PlayerTurn = 0.1
 export var PlayerTurnDrag = 0.1
@@ -25,7 +25,7 @@ func _process(delta):
 		
 	
 func motion(delta):	
-	move_and_slide(joyMotion(delta))
+	move_and_collide(joyMotion(delta))
 	
 func joyMotion(delta):
 	var force = Vector2(0,0)

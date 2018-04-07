@@ -7,10 +7,10 @@ path="res://.import/smash.png-d6fab3a4be115d120f6d189716cd4a32.stex"
 [deps]
 
 source_file="res://textures/smash.png"
-source_md5="8b244f7c9d5b1227f22f80171d975b8c"
+source_md5="3af4c76ccc84abf321b665705e2ab31f"
 
 dest_files=[ "res://.import/smash.png-d6fab3a4be115d120f6d189716cd4a32.stex" ]
-dest_md5="fec82204aab2ce0bdf925536cc6d107b"
+dest_md5="20fde529d57962620a2f1c45db6a41b8"
 
 [params]
 

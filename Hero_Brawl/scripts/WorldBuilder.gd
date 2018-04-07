@@ -47,7 +47,7 @@ func place_players(numPlayers, leftEdge, rightEdge):
 			place_player(rightEdge-40, leftEdge+40, "Player")
 			place_player(leftEdge+40, rightEdge-40, "Player")
 		1:
-			place_player(leftEdge+40, leftEdge+40, "Hulk")
+			place_player(leftEdge+40, leftEdge+40, "Ghost")
 		_:
 			print("invalid number of players. should be between 1 and 4")
 
