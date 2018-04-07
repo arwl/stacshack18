@@ -1,10 +1,12 @@
-extends RigidBody2D
+extends KinematicBody2D
 
 # Members
 export var PlayerAccel = 100
 export var PlayerAccelDrag = 0.5
 export var PlayerTurn = 0.1
 export var PlayerTurnDrag = 0.1
+
+export var speed = 50
 
 export var health = 100
 
@@ -23,24 +25,21 @@ func _process(delta):
 		
 	
 func motion(delta):	
-	apply_impulse(Vector2(0, 0), keyboardMotion(delta))
+	move_and_collide(joyMotion(delta))
 	
 func joyMotion(delta):
 	var force = Vector2(0,0)
 	
-	if Input.get_joy_axis(0, 7) > 0:
-		force = Vector2(cos(rotation), sin(rotation)) * PlayerAccel
+	if Input.get_joy_axis(0, 0) != 0 && Input.get_joy_axis(0, 1) != 0:
+		force = Vector2(Input.get_joy_axis(0, 0), Input.get_joy_axis(0, 1)) * PlayerAccel
 		
-	var turn = 0
-	if Input.get_joy_axis(0, 0) != 0:
-		set_angular_velocity(get_angular_velocity() + Input.get_joy_axis(0, 0) * PlayerTurn)
-	else:
-		set_angular_velocity(get_angular_velocity() * PlayerTurnDrag)
+	var rotationVector
+	rotationVector = Vector2(Input.get_joy_axis(0, 0), Input.get_joy_axis(0, 1))
 	
-	var motion = force * delta
+	rotation = -(atan2(Input.get_joy_axis(0, 2), Input.get_joy_axis(0, 3)))
 	
-	return motion
-	
+	return force * delta
+		
 func keyboardMotion(delta):
 	var force = Vector2(0,0)
 	
