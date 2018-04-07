@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/start button.png-c5c1118fbf699f093031482ed30800bd.stex"
+
+[deps]
+
+source_file="res://textures/start button.png"
+source_md5="4aaea86a5487a9a03ed296f0b0bbc640"
+
+dest_files=[ "res://.import/start button.png-c5c1118fbf699f093031482ed30800bd.stex" ]
+dest_md5="2deb1a4ddc2e5f15c43836b8e7d26401"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

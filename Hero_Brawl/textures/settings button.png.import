@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/settings button.png-153e0cf3556503b977fca4ba4eef4cde.stex"
+
+[deps]
+
+source_file="res://textures/settings button.png"
+source_md5="527b4512ac9c11e14207c66203c357db"
+
+dest_files=[ "res://.import/settings button.png-153e0cf3556503b977fca4ba4eef4cde.stex" ]
+dest_md5="a3f19c4707217d465e298bb209d3e26a"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
