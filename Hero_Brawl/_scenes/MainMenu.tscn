@@ -1,48 +1,33 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://textures/world_temp.png" type="Texture" id=1]
-[ext_resource path="res://textures/settings button.png" type="Texture" id=2]
-[ext_resource path="res://scripts/StartButton.gd" type="Script" id=3]
-[ext_resource path="res://textures/start button.png" type="Texture" id=4]
-
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
+[ext_resource path="res://textures/menu_bg.png" type="Texture" id=1]
+[ext_resource path="res://_scenes/StartButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://_scenes/SettingsButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://textures/logo.png" type="Texture" id=4]
 
 [node name="Node2D" type="Node2D" index="0"]
 
-[node name="bg" type="Sprite" parent="." index="0"]
+[node name="menu_bg" type="Sprite" parent="." index="0"]
 
-position = Vector2( 359.35, 361.676 )
-scale = Vector2( 1.65741, 1.63502 )
 texture = ExtResource( 1 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
 
-[node name="settings" type="Sprite" parent="bg" index="0"]
+[node name="startArea" parent="menu_bg" index="0" instance=ExtResource( 2 )]
 
-position = Vector2( -5.77354, 118.826 )
-texture = ExtResource( 2 )
+position = Vector2( 373.239, 494.394 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="Area2D" type="Area2D" parent="bg" index="1"]
+[node name="settingsArea" parent="menu_bg" index="1" instance=ExtResource( 3 )]
 
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-script = ExtResource( 3 )
+position = Vector2( 368.615, 609.275 )
+scale = Vector2( 3.77247, 1.78951 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="start" type="Sprite" parent="bg/Area2D" index="0"]
+[node name="logo" type="Sprite" parent="menu_bg" index="2"]
 
-position = Vector2( -4.70995, -23.298 )
+position = Vector2( 359.885, 185.25 )
 texture = ExtResource( 4 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="bg/Area2D" index="1"]
-
-position = Vector2( -5.02833, -23.5097 )
-scale = Vector2( 11.9375, 5.81473 )
-shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/smash.png-d6fab3a4be115d120f6d189716cd4a32.stex"
+path="res://.import/cage.png-29b18ffe4f1d8e57a12e1d43ccb45390.stex"
 
 [deps]
 
-source_file="res://textures/smash.png"
-source_md5="3af4c76ccc84abf321b665705e2ab31f"
+source_file="res://textures/cage.png"
+source_md5="aa309e3251e5d91da1b0e7fc0c5c302e"
 
-dest_files=[ "res://.import/smash.png-d6fab3a4be115d120f6d189716cd4a32.stex" ]
-dest_md5="20fde529d57962620a2f1c45db6a41b8"
+dest_files=[ "res://.import/cage.png-29b18ffe4f1d8e57a12e1d43ccb45390.stex" ]
+dest_md5="96962e6ff2ea382eb2293c1a52f2f3e8"
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/smash.png-d6fab3a4be115d120f6d189716cd4a32.stex"
+path="res://.import/settings page.png-8bfa2655f645ac5985bbc876c894263a.stex"
 
 [deps]
 
-source_file="res://textures/smash.png"
-source_md5="3af4c76ccc84abf321b665705e2ab31f"
+source_file="res://textures/settings page.png"
+source_md5="c39643c7bd4d74a59d3fc86ebb43f591"
 
-dest_files=[ "res://.import/smash.png-d6fab3a4be115d120f6d189716cd4a32.stex" ]
-dest_md5="20fde529d57962620a2f1c45db6a41b8"
+dest_files=[ "res://.import/settings page.png-8bfa2655f645ac5985bbc876c894263a.stex" ]
+dest_md5="2c5cb9058c7e9cdd4931854e4745794f"
 
 [params]
 

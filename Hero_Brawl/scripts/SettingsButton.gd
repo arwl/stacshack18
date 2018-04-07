@@ -12,8 +12,8 @@ func _ready():
 
 func _input_event(viewport, event, shape_idx):
 	if (event.is_pressed()):
-		print("start")
-		get_tree().change_scene("res://_scenes/Game.tscn")
+		print("settings")
+		get_tree().change_scene("res://_scenes/SettingsMenu.tscn")
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.

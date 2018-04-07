@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/smash.png-d6fab3a4be115d120f6d189716cd4a32.stex"
+path="res://.import/fireball.png-a32502fd2d816dc2eaf1f5ab4b63b50a.stex"
 
 [deps]
 
-source_file="res://textures/smash.png"
-source_md5="3af4c76ccc84abf321b665705e2ab31f"
+source_file="res://textures/fireball.png"
+source_md5="11e9cee47a6120136d313483f5022d30"
 
-dest_files=[ "res://.import/smash.png-d6fab3a4be115d120f6d189716cd4a32.stex" ]
-dest_md5="20fde529d57962620a2f1c45db6a41b8"
+dest_files=[ "res://.import/fireball.png-a32502fd2d816dc2eaf1f5ab4b63b50a.stex" ]
+dest_md5="90b0cd8f64e1787a23915a6c20052bb8"
 
 [params]
 
