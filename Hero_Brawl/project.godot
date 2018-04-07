@@ -11,7 +11,12 @@ config_version=3
 [application]
 
 config/name="Hero_Brawl"
+run/main_scene="res://_scenes/game.tscn"
 config/icon="res://icon.png"
+
+[physics]
+
+2d/default_gravity=0
 
 [rendering]
 
