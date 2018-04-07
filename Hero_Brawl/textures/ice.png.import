@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/world_temp.png-54f2be8dbd352acd8f5ac9172e79e143.stex"
+path="res://.import/ice.png-f491141abcf8911941e9056f40cb4f24.stex"
 
 [deps]
 
-source_file="res://textures/world_temp.png"
-source_md5="4a9c36b1007ba9c51fe471f007e6ebb8"
+source_file="res://textures/ice.png"
+source_md5="b6270ba65d26aa9229a68256ec9e3704"
 
-dest_files=[ "res://.import/world_temp.png-54f2be8dbd352acd8f5ac9172e79e143.stex" ]
-dest_md5="0402a91d1cd2a09742d8594cec93ad20"
+dest_files=[ "res://.import/ice.png-f491141abcf8911941e9056f40cb4f24.stex" ]
+dest_md5="e326c673fe03a082750aecd0130c0f22"
 
 [params]
 

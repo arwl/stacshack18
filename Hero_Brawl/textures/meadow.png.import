@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/world_temp.png-54f2be8dbd352acd8f5ac9172e79e143.stex"
+path="res://.import/meadow.png-6142d9ddead31ba195ecfbc3be262f79.stex"
 
 [deps]
 
-source_file="res://textures/world_temp.png"
-source_md5="4a9c36b1007ba9c51fe471f007e6ebb8"
+source_file="res://textures/meadow.png"
+source_md5="4580b4e10731008fdd1c8c3f95b433f3"
 
-dest_files=[ "res://.import/world_temp.png-54f2be8dbd352acd8f5ac9172e79e143.stex" ]
-dest_md5="0402a91d1cd2a09742d8594cec93ad20"
+dest_files=[ "res://.import/meadow.png-6142d9ddead31ba195ecfbc3be262f79.stex" ]
+dest_md5="c64a986933ef817d203b1d9935857ae4"
 
 [params]
 

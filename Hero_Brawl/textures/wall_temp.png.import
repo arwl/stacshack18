@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wall_temp.png-91fe71d0ccf9dd659343f1b8e274d447.stex"
+path="res://.import/wall_temp.png-f23bfbdb6a15aa7cce0682636d5329c8.stex"
 
 [deps]
 
-source_file="res://temp_resources/wall_temp.png"
+source_file="res://textures/wall_temp.png"
 source_md5="b87df7648edc5017ac6b5c28ef96ba43"
 
-dest_files=[ "res://.import/wall_temp.png-91fe71d0ccf9dd659343f1b8e274d447.stex" ]
+dest_files=[ "res://.import/wall_temp.png-f23bfbdb6a15aa7cce0682636d5329c8.stex" ]
 dest_md5="48d90884e81f31adebf61045967a7663"
 
 [params]
