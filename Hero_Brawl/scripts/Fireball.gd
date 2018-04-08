@@ -14,11 +14,18 @@ func _ready():
 
 func _process(delta):
 	translate(direction * speed)
-
+	print("hello")
+	
+	print(get_node("Area2D").get_overlapping_bodies().size())
 	for collider in get_node("Area2D").get_overlapping_bodies():
 		if 	(collider.is_in_group("Wall")):
 			queue_free()
 		if 	(collider.is_in_group("Heroes")):
 			queue_free()
 			collider.hit(direction, 5, 25)
-	
+
+
+
+
+
+

@@ -15,6 +15,7 @@ func _ready():
 #	pass
 
 func special():
+	get_node("./special").play(0)
 	timeOfLastSpecial = OS.get_ticks_msec()
 	
 	var fireballScene = load("res://_scenes/Fireball.tscn")

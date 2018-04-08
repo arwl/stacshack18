@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/spiderman.wav-24e3fe4e559d3116b06389c5c5738c6f.sample"
+
+[deps]
+
+source_file="res://Sound Effects/spiderman.wav"
+source_md5="65ce75a9961899e9c525e16f5e854b83"
+
+dest_files=[ "res://.import/spiderman.wav-24e3fe4e559d3116b06389c5c5738c6f.sample" ]
+dest_md5="4fb3c85024b79bb4217825cad7753f43"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
