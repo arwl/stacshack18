@@ -4,7 +4,7 @@
 [ext_resource path="res://scripts/WorldBuilder.gd" type="Script" id=2]
 [ext_resource path="res://textures/Ghost.png" type="Texture" id=3]
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node2D" index="0"]
 
 [node name="meadow" type="Sprite" parent="." index="0"]
 
