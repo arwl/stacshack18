@@ -7,17 +7,23 @@ extends "res://scripts/PlayerKinematicBody.gd"
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
-	special()
+	SpecialCooldown = 4000
+	SpecialLength = 2000
 	pass
-
-var old_shape = null
-
+	
 func special():
-	old_shape = get_node('./CollisionShape2D')
-	get_node(".").remove_child(get_node("./CollisionShape2D"))
+	timeOfLastSpecial = OS.get_ticks_msec()
+	for thing in get_node(".").get_parent().get_parent().get_children():
+		for thing2 in thing.get_children():
+			for thing3 in thing2.get_children():
+				if (thing3.is_in_group("Wall") && !thing3.is_in_group("ExtWall")):
+					add_collision_exception_with(thing3)
 	
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func _process(delta):
+	if (OS.get_ticks_msec() - timeOfLastSpecial > SpecialLength):
+		for thing in get_node(".").get_parent().get_parent().get_children():
+			for thing2 in thing.get_children():
+				for thing3 in thing2.get_children():
+					if (thing3.is_in_group("Wall") && !thing3.is_in_group("ExtWall")):
+						remove_collision_exception_with(thing3)

@@ -1,8 +1,23 @@
+<<<<<<< HEAD
 [gd_scene load_steps=4 format=2]
+=======
+<<<<<<< HEAD
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://textures/meadow.png" type="Texture" id=1]
+[ext_resource path="res://scripts/WorldBuilder.gd" type="Script" id=2]
+=======
+[gd_scene load_steps=5 format=2]
+>>>>>>> 57f85f75e33ea6f8b44a8efd4b083cb8ec84dee3
 
 [ext_resource path="res://textures/meadow.png" type="Texture" id=1]
 [ext_resource path="res://scripts/WorldBuilder.gd" type="Script" id=2]
 [ext_resource path="res://textures/Ghost.png" type="Texture" id=3]
+<<<<<<< HEAD
+=======
+[ext_resource path="res://Sound Effects/batman.wav" type="AudioStream" id=4]
+>>>>>>> c9e22de575b8aa7af07ae0ae8f404e3ac669b5b3
+>>>>>>> 57f85f75e33ea6f8b44a8efd4b083cb8ec84dee3
 
 [node name="Game" type="Node2D"]
 
@@ -11,12 +26,14 @@
 position = Vector2( 360.167, 360.163 )
 scale = Vector2( 0.50355, 0.503863 )
 texture = ExtResource( 1 )
-_sections_unfolded = [ "Material" ]
+_sections_unfolded = [ "Material", "Transform" ]
 
 [node name="WorldBuilder" type="Node2D" parent="." index="1"]
 
 script = ExtResource( 2 )
 
+<<<<<<< HEAD
+=======
 [node name="bg" type="Sprite" parent="." index="2"]
 
 position = Vector2( 347.635, 361.414 )
@@ -25,4 +42,17 @@ z_index = -2
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Z Index" ]
 
+<<<<<<< HEAD
+=======
+[node name="bgmusic" type="AudioStreamPlayer" parent="." index="3"]
+
+stream = ExtResource( 4 )
+volume_db = -12.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+_sections_unfolded = [ "Pause" ]
+
+>>>>>>> c9e22de575b8aa7af07ae0ae8f404e3ac669b5b3
+>>>>>>> 57f85f75e33ea6f8b44a8efd4b083cb8ec84dee3
 

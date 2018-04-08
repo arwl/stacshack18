@@ -4,12 +4,20 @@ extends "res://scripts/PlayerKinematicBody.gd"
 # var a = 2
 # var b = "textvar"
 
-func _ready():
+#func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
-	pass
+	
+func _ready():
+	SpecialCooldown = 3000
+	SpecialLength = 1000
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func _process(delta):
+	if (OS.get_ticks_msec() - timeOfLastSpecial > SpecialLength):
+		speed = 100
+
+func special():
+	timeOfLastSpecial = OS.get_ticks_msec()
+	speed = 200
+	
+	
