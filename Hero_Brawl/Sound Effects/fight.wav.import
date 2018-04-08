@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/fight.wav-9ed192e48da6279c3fd643355dad8f38.sample"
+
+[deps]
+
+source_file="res://Sound Effects/fight.wav"
+source_md5="23a12f08f8c358ef34d8497bec589132"
+
+dest_files=[ "res://.import/fight.wav-9ed192e48da6279c3fd643355dad8f38.sample" ]
+dest_md5="8f9d61cf4d797668574416b908471490"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

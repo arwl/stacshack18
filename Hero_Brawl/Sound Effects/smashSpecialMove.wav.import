@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/smashSpecialMove.wav-f16a249403271c9ac157b35a8712111a.sample"
+
+[deps]
+
+source_file="res://Sound Effects/smashSpecialMove.wav"
+source_md5="463a833cc9c25a39b03aa47c5a5c6f9c"
+
+dest_files=[ "res://.import/smashSpecialMove.wav-f16a249403271c9ac157b35a8712111a.sample" ]
+dest_md5="15bc4de88ea454352d144cf740beed7e"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

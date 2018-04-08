@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/respawn.wav-bf53ae2237cc59914337a87eb98dbefb.sample"
+
+[deps]
+
+source_file="res://Sound Effects/respawn.wav"
+source_md5="c381c3dfe39a5fc0439d8185e3be46d2"
+
+dest_files=[ "res://.import/respawn.wav-bf53ae2237cc59914337a87eb98dbefb.sample" ]
+dest_md5="f91b203a902300b421fdc1284af8435f"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

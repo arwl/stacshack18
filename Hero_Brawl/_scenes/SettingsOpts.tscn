@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://textures/settings page.png" type="Texture" id=1]
+[ext_resource path="res://_scenes/CharSelection.tscn" type="PackedScene" id=2]
+
+[node name="settings page" type="Sprite"]
+
+texture = ExtResource( 1 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="P1Select" parent="." index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 131.543, 270.191 )
+
+[node name="P2Select" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 432.506, 268.846 )
+
+[node name="P3Select" parent="." index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 132.004, 523.68 )
+
+[node name="P4Select" parent="." index="3" instance=ExtResource( 2 )]
+
+position = Vector2( 435.804, 524.68 )
+
+

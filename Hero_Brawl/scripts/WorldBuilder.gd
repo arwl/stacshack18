@@ -4,6 +4,11 @@ extends Node2D
 # var a = 2
 # var b = "textvar"
 
+var p1char = "Ghost"
+var p2char = "Hulk"
+var p3char = "Fireboy"
+var p4char = "Bombman"
+
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
@@ -18,7 +23,7 @@ func _ready():
 func setup_board():
 	#loac_map("meadow")
 	place_ext_walls(480, 24)
-	place_players(1, 120, 600)
+	place_players(4, 120, 600)
 	#place_walls(64)
 	#place_wall_length(20, 20, 3, "h")
 	place_random_wall_lengths(16, 16)
@@ -35,19 +40,19 @@ func place_players(numPlayers, leftEdge, rightEdge):
 	# number of players should be between 1 and 4
 	match (numPlayers):
 		4:
-			place_player(rightEdge-40, rightEdge-40, "Hulk")
-			place_player(leftEdge+40, rightEdge-40, "Ghost")
-			place_player(rightEdge-40, leftEdge+40, "Bombman")
-			place_player(leftEdge+40, leftEdge+40, "Fireboy")
+			place_player(rightEdge-40, rightEdge-40, global.p4Char)
+			place_player(leftEdge+40, rightEdge-40, global.p3Char)
+			place_player(rightEdge-40, leftEdge+40, global.p2Char)
+			place_player(leftEdge+40, leftEdge+40, global.p1Char)
 		3:
-			place_player(leftEdge+40, rightEdge-40, "Player")
-			place_player(rightEdge-40, leftEdge+40, "Player")
-			place_player(leftEdge+40, leftEdge+40, "Player")
+			place_player(leftEdge+40, rightEdge-40, global.p3Char)
+			place_player(rightEdge-40, leftEdge+40, global.p2Char)
+			place_player(leftEdge+40, leftEdge+40, global.p1Char)
 		2:
-			place_player(rightEdge-40, leftEdge+40, "Player")
-			place_player(leftEdge+40, rightEdge-40, "Player")
+			place_player(rightEdge-40, leftEdge+40, global.p2Char)
+			place_player(leftEdge+40, rightEdge-40, global.p1Char)
 		1:
-			place_player(leftEdge+40, leftEdge+40, "Ghost")
+			place_player(leftEdge+40, leftEdge+40, global.p1Char)
 		_:
 			print("invalid number of players. should be between 1 and 4")
 
@@ -112,3 +117,6 @@ func place_walls(numWalls):
 		randomize()
 		place_wall(rand_range(128, 592), rand_range(128,592), "obstacle")
 		#place_wall(randi()%468+128, randi()%468+128, "obstacle")
+
+func setP1Char(character):
+	p1char = character

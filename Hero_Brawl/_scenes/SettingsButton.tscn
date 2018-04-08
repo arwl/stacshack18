@@ -3,7 +3,7 @@
 [ext_resource path="res://scripts/SettingsButton.gd" type="Script" id=1]
 [ext_resource path="res://textures/settings button.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
@@ -30,6 +30,6 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 scale = Vector2( 3.29439, 3.29439 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 

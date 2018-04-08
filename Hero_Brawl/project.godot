@@ -11,8 +11,12 @@ config_version=3
 [application]
 
 config/name="Hero_Brawl"
-run/main_scene="res://_scenes/Game.tscn"
+run/main_scene="res://_scenes/MainMenu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+global="*res://scripts/Globals.gd"
 
 [display]
 

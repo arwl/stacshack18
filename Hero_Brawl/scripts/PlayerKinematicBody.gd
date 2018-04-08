@@ -54,3 +54,5 @@ func deadzone(lr, ud):
 func attack():
 	pass
 	
+func special():
+	pass

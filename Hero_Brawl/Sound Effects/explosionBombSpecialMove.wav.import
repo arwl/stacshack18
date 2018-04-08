@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/explosionBombSpecialMove.wav-c429ec6aa69109dd2f1eac3bd8900346.sample"
+
+[deps]
+
+source_file="res://Sound Effects/explosionBombSpecialMove.wav"
+source_md5="4977db46cf838d8cfd67e9d11a81bfd8"
+
+dest_files=[ "res://.import/explosionBombSpecialMove.wav-c429ec6aa69109dd2f1eac3bd8900346.sample" ]
+dest_md5="c765ed26c569e686387577a422424e13"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

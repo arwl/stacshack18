@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/attackNoise1.wav-d6e46c9524affd94f0670fb912e6c76b.sample"
+
+[deps]
+
+source_file="res://Sound Effects/attackNoise1.wav"
+source_md5="d8abdd00c87572768df5d85a1738b54d"
+
+dest_files=[ "res://.import/attackNoise1.wav-d6e46c9524affd94f0670fb912e6c76b.sample" ]
+dest_md5="0c9bf7590cf62b3f8d50a2db6fb26e3e"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
