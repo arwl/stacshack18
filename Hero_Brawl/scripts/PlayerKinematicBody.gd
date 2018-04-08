@@ -12,12 +12,13 @@ var timeOfLastMelee = 0
 var timeOfLastSpecial = 0
 export var PlayerNo = 0
 
-onready var fist = get_node("Fist")
-onready var sprite = get_node("PlayerSprite")
+onready var fist
+#onready var sprite = get_node("PlayerSprite")
 
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
+	fist = get_node("Fist")
 	fist.hide()
 	set_process(true)
 
@@ -34,6 +35,8 @@ func _process(delta):
 		special()
 
 	if (health <= 0):
+		get_node(".").get_parent().remove_child(get_node("."))
+		global.playersAlive -= 1
 		print("ded")
 
 

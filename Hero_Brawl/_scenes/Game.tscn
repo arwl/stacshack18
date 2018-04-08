@@ -1,19 +1,28 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://textures/meadow.png" type="Texture" id=1]
 [ext_resource path="res://scripts/WorldBuilder.gd" type="Script" id=2]
+[ext_resource path="res://textures/Ghost.png" type="Texture" id=3]
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node2D" index="0"]
 
 [node name="meadow" type="Sprite" parent="." index="0"]
 
 position = Vector2( 360.167, 360.163 )
 scale = Vector2( 0.50355, 0.503863 )
 texture = ExtResource( 1 )
-_sections_unfolded = [ "Material", "Transform" ]
+_sections_unfolded = [ "Material" ]
 
 [node name="WorldBuilder" type="Node2D" parent="." index="1"]
 
 script = ExtResource( 2 )
+
+[node name="bg" type="Sprite" parent="." index="2"]
+
+position = Vector2( 347.635, 361.414 )
+scale = Vector2( 33.3107, 32.0272 )
+z_index = -1
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Z Index" ]
 
 

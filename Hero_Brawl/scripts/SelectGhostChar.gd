@@ -12,6 +12,10 @@ func _ready():
 
 func _input_event(viewport, event, shape_idx):
 	if (event.is_pressed()):
+		get_node("../ghostSelected").show()
+		get_node("../bombSelected").hide()
+		get_node("../hulkSelected").hide()
+		get_node("../fireSelected").hide()
 		match (get_node("../").name):
 			"P1Select":
 				global.setP1Char("Ghost")

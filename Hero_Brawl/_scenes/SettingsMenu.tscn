@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://_scenes/SettingsOpts.tscn" type="PackedScene" id=1]
 [ext_resource path="res://_scenes/StartButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/BackToMain.gd" type="Script" id=3]
+[ext_resource path="res://textures/back_btn.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 33.4166, 10 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -11,5 +18,28 @@
 
 position = Vector2( 640.315, 94.3817 )
 scale = Vector2( 0.578835, 0.578835 )
+
+[node name="Area2D" type="Area2D" parent="." index="2"]
+
+position = Vector2( 83.8943, 58.6446 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 3 )
+
+[node name="back_btn" type="Sprite" parent="Area2D" index="0"]
+
+position = Vector2( 13.3115, -7.11006 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="1"]
+
+position = Vector2( -18.7337, -2.42748 )
+scale = Vector2( 1, 1.81574 )
+shape = SubResource( 1 )
 
 

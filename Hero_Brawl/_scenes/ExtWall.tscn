@@ -9,6 +9,9 @@ extents = Vector2( 10, 10 )
 
 [node name="ExtWallNode" type="Node2D"]
 
+z_index = 1
+_sections_unfolded = [ "Z Index" ]
+
 [node name="ExtWall" type="Sprite" parent="." index="0"]
 
 texture = ExtResource( 1 )
