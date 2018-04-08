@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/Bombman.gd" type="Script" id=1]
 [ext_resource path="res://textures/bomb.png" type="Texture" id=2]
+[ext_resource path="res://_scenes/MeleeAoE.tscn" type="PackedScene" id=3]
+[ext_resource path="res://_scenes/Fist.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -10,19 +12,21 @@ extents = Vector2( 10, 10 )
 
 [node name="BombmanNode" type="Node2D"]
 
-[node name="Bombman" type="KinematicBody2D" parent="." index="0"]
+[node name="Bombman" type="KinematicBody2D" parent="." index="0" groups=[
+"Heroes",
+]]
 
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-PlayerAccel = 100
-PlayerAccelDrag = 0.5
-PlayerTurn = 0.1
-PlayerTurnDrag = 0.1
-speed = 50
+speed = 100
 health = 100
+MeleeCooldown = 250
+Knockback = 15
+Damage = 20
+PlayerNo = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bombman" index="0"]
 
@@ -32,5 +36,11 @@ shape = SubResource( 1 )
 
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="MeleeAoE" parent="Bombman" index="2" instance=ExtResource( 3 )]
+
+scale = Vector2( 0.377352, 0.377352 )
+
+[node name="Fist" parent="Bombman" index="3" instance=ExtResource( 4 )]
 
 

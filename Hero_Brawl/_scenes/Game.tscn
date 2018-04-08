@@ -10,7 +10,7 @@
 position = Vector2( 360.167, 360.163 )
 scale = Vector2( 0.50355, 0.503863 )
 texture = ExtResource( 1 )
-_sections_unfolded = [ "Material" ]
+_sections_unfolded = [ "Material", "Transform" ]
 
 [node name="WorldBuilder" type="Node2D" parent="." index="1"]
 

@@ -1,54 +1,49 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/PlayerKinematicBody.gd" type="Script" id=1]
 [ext_resource path="res://textures/player.png" type="Texture" id=2]
+[ext_resource path="res://_scenes/MeleeAoE.tscn" type="PackedScene" id=3]
+[ext_resource path="res://_scenes/Fist.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
-[node name="PlayerRigidBody2D" type="RigidBody2D" parent="." index="0"]
+[node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]
 
-scale = Vector2( 2.96618, 2.92714 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
-mode = 0
-mass = 65535.0
-friction = 1.0
-bounce = 0.1
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-linear_velocity = Vector2( 0, 0 )
-linear_damp = 0.0
-angular_velocity = 0.0
-angular_damp = -1.0
+collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Linear" ]
-PlayerAccel = 100
-PlayerAccelDrag = 0.5
-PlayerTurn = 0.1
-PlayerTurnDrag = 0.1
-speed = 50
+speed = 100
 health = 100
+MeleeCooldown = 250
+Knockback = 15
+Damage = 20
+PlayerNo = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerRigidBody2D" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D" index="0"]
 
+scale = Vector2( 3.0623, 3.022 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="PlayerSprite" type="Sprite" parent="PlayerRigidBody2D" index="1"]
+[node name="PlayerSprite" type="Sprite" parent="KinematicBody2D" index="1"]
 
-scale = Vector2( 0.0519966, 0.0519448 )
+position = Vector2( -0.216446, -0.0486145 )
+scale = Vector2( 0.121655, 0.119934 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="MeleeAoE" parent="KinematicBody2D" index="2" instance=ExtResource( 3 )]
+
+[node name="Fist" parent="KinematicBody2D" index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 3.41373, -51.4362 )
+scale = Vector2( 2.62808, 2.62808 )
 
 

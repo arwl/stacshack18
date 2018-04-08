@@ -27,38 +27,40 @@ func setup_board():
 	#place_walls(64)
 	#place_wall_length(20, 20, 3, "h")
 	place_random_wall_lengths(16, 16)
-	
+
 
 func load_map(mapName):
 	var mapScene = load("res://_scenes/" + mapName + ".tscn")
 	var map = mapScene.instance()
 	map.translate(Vector2(0,0))
 	get_node(".").call_deferred("add_child", map)
-	
+
 
 func place_players(numPlayers, leftEdge, rightEdge):
 	# number of players should be between 1 and 4
 	match (numPlayers):
 		4:
-			place_player(rightEdge-40, rightEdge-40, global.p4Char)
-			place_player(leftEdge+40, rightEdge-40, global.p3Char)
-			place_player(rightEdge-40, leftEdge+40, global.p2Char)
-			place_player(leftEdge+40, leftEdge+40, global.p1Char)
+			place_player(rightEdge-40, rightEdge-40, global.p4Char, 3)
+			place_player(leftEdge+40, rightEdge-40, global.p3Char, 2)
+			place_player(rightEdge-40, leftEdge+40, global.p2Char, 1)
+			place_player(leftEdge+40, leftEdge+40, global.p1Char, 0)
 		3:
-			place_player(leftEdge+40, rightEdge-40, global.p3Char)
-			place_player(rightEdge-40, leftEdge+40, global.p2Char)
-			place_player(leftEdge+40, leftEdge+40, global.p1Char)
+			place_player(leftEdge+40, rightEdge-40, global.p3Char, 2)
+			place_player(rightEdge-40, leftEdge+40, global.p2Char, 1)
+			place_player(leftEdge+40, leftEdge+40, global.p1Char, 0)
 		2:
-			place_player(rightEdge-40, leftEdge+40, global.p2Char)
-			place_player(leftEdge+40, rightEdge-40, global.p1Char)
+			place_player(rightEdge-40, leftEdge+40, global.p2Char, 1)
+			place_player(leftEdge+40, rightEdge-40, global.p1Char, 0)
 		1:
-			place_player(leftEdge+40, leftEdge+40, global.p1Char)
+			place_player(leftEdge+40, leftEdge+40, global.p1Char, 0)
 		_:
 			print("invalid number of players. should be between 1 and 4")
 
-func place_player(x, y, character):
+func place_player(x, y, character, playerNo):
 	var playerScene = load("res://_scenes/" + character + ".tscn")
 	var player = playerScene.instance()
+	var playerBody = player.get_children()[0]
+	playerBody.PlayerNo = playerNo
 	player.translate(Vector2(x,y))
 	get_node(".").call_deferred("add_child", player)
 
