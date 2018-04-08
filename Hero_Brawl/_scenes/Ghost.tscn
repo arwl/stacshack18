@@ -1,33 +1,27 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scripts/Ghost.gd" type="Script" id=1]
 [ext_resource path="res://textures/ghost.png" type="Texture" id=2]
-<<<<<<< HEAD
-[ext_resource path="res://_scenes/MeleeAoE.tscn" type="PackedScene" id=3]
-[ext_resource path="res://_scenes/Fist.tscn" type="PackedScene" id=4]
-=======
 [ext_resource path="res://_scenes/Fist.tscn" type="PackedScene" id=3]
 [ext_resource path="res://_scenes/MeleeAoE.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Sound Effects/attackNoise1.wav" type="AudioStream" id=5]
 [ext_resource path="res://Sound Effects/attackNoise2.wav" type="AudioStream" id=6]
 [ext_resource path="res://Sound Effects/attackNoise3.wav" type="AudioStream" id=7]
 [ext_resource path="res://Sound Effects/deathnoise3.wav" type="AudioStream" id=8]
-<<<<<<< HEAD
 [ext_resource path="res://_scenes/GUI.tscn" type="PackedScene" id=9]
-=======
->>>>>>> c9e22de575b8aa7af07ae0ae8f404e3ac669b5b3
->>>>>>> 57f85f75e33ea6f8b44a8efd4b083cb8ec84dee3
+[ext_resource path="res://Sound Effects/ghostSpecialMove.wav" type="AudioStream" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="GhostNode" type="Node2D"]
+[node name="GhostNode" type="Node2D" index="0"]
 
-[node name="Ghost" type="KinematicBody2D" parent="." index="0" groups=[
-"Heroes",
-]]
+z_index = 2
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Ghost" type="KinematicBody2D" parent="." index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -53,11 +47,12 @@ _sections_unfolded = [ "Transform" ]
 
 shape = SubResource( 1 )
 
-[node name="MeleeAoE" parent="Ghost" index="2" instance=ExtResource( 3 )]
+[node name="Fist" parent="Ghost" index="2" instance=ExtResource( 3 )]
 
-scale = Vector2( 0.339668, 0.339668 )
+[node name="MeleeAoE" parent="Ghost" index="3" instance=ExtResource( 4 )]
 
-[node name="Fist" parent="Ghost" index="3" instance=ExtResource( 4 )]
+scale = Vector2( 0.377352, 0.377352 )
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="attack1" type="AudioStreamPlayer" parent="Ghost" index="4"]
 
@@ -97,5 +92,13 @@ margin_left = -68.0
 margin_top = -7.0
 margin_right = 4.0
 margin_bottom = 130.0
+
+[node name="special" type="AudioStreamPlayer" parent="Ghost" index="9"]
+
+stream = ExtResource( 10 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 

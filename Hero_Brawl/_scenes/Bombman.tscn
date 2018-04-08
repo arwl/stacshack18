@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scripts/Bombman.gd" type="Script" id=1]
 [ext_resource path="res://textures/bomb.png" type="Texture" id=2]
@@ -9,13 +9,14 @@
 [ext_resource path="res://Sound Effects/attackNoise3.wav" type="AudioStream" id=7]
 [ext_resource path="res://Sound Effects/deathnoise1.wav" type="AudioStream" id=8]
 [ext_resource path="res://_scenes/GUI.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Sound Effects/zoom.wav" type="AudioStream" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="BombmanNode" type="Node2D"]
+[node name="BombmanNode" type="Node2D" index="0"]
 
 [node name="Bombman" type="KinematicBody2D" parent="." index="0" groups=[
 "Heroes",
@@ -26,7 +27,6 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision" ]
 speed = 100
 health = 100
 MeleeCooldown = 250
@@ -49,6 +49,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="MeleeAoE" parent="Bombman" index="2" instance=ExtResource( 3 )]
 
 scale = Vector2( 0.377352, 0.377352 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Fist" parent="Bombman" index="3" instance=ExtResource( 4 )]
 
@@ -90,5 +91,13 @@ margin_left = -68.0
 margin_top = -7.0
 margin_right = 4.0
 margin_bottom = 130.0
+
+[node name="special" type="AudioStreamPlayer" parent="Bombman" index="9"]
+
+stream = ExtResource( 10 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 

@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scripts/Hulk.gd" type="Script" id=1]
 [ext_resource path="res://_scenes/GUI.tscn" type="PackedScene" id=2]
@@ -10,33 +9,15 @@
 [ext_resource path="res://Sound Effects/attackNoise2.wav" type="AudioStream" id=7]
 [ext_resource path="res://Sound Effects/attackNoise3.wav" type="AudioStream" id=8]
 [ext_resource path="res://Sound Effects/deathnoise4.wav" type="AudioStream" id=9]
-=======
-<<<<<<< HEAD
-[gd_scene load_steps=7 format=2]
-=======
-[gd_scene load_steps=10 format=2]
->>>>>>> c9e22de575b8aa7af07ae0ae8f404e3ac669b5b3
-
-[ext_resource path="res://scripts/Hulk.gd" type="Script" id=1]
-[ext_resource path="res://textures/smash.png" type="Texture" id=2]
-[ext_resource path="res://_scenes/MeleeAoE.tscn" type="PackedScene" id=3]
-[ext_resource path="res://_scenes/Fist.tscn" type="PackedScene" id=4]
-<<<<<<< HEAD
-[ext_resource path="res://textures/hulkhand.png" type="Texture" id=5]
-=======
-[ext_resource path="res://Sound Effects/attackNoise1.wav" type="AudioStream" id=5]
-[ext_resource path="res://Sound Effects/attackNoise2.wav" type="AudioStream" id=6]
-[ext_resource path="res://Sound Effects/attackNoise3.wav" type="AudioStream" id=7]
-[ext_resource path="res://Sound Effects/deathnoise4.wav" type="AudioStream" id=8]
->>>>>>> c9e22de575b8aa7af07ae0ae8f404e3ac669b5b3
->>>>>>> 57f85f75e33ea6f8b44a8efd4b083cb8ec84dee3
+[ext_resource path="res://textures/hulkhand.png" type="Texture" id=10]
+[ext_resource path="res://Sound Effects/smashSpecialMove.wav" type="AudioStream" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="HulkNode" type="Node2D"]
+[node name="HulkNode" type="Node2D" index="0"]
 
 [node name="Hulk" type="KinematicBody2D" parent="." index="0" groups=[
 "Heroes",
@@ -79,17 +60,7 @@ scale = Vector2( 0.377405, 0.377405 )
 
 [node name="Fist" parent="Hulk" index="4" instance=ExtResource( 5 )]
 
-<<<<<<< HEAD
 [node name="attack1" type="AudioStreamPlayer" parent="Hulk" index="5"]
-=======
-<<<<<<< HEAD
-[node name="Greenfist" type="Sprite" parent="Hulk" index="4"]
-
-position = Vector2( 0.642563, -21.7186 )
-texture = ExtResource( 5 )
-=======
-[node name="attack1" type="AudioStreamPlayer" parent="Hulk" index="4"]
->>>>>>> 57f85f75e33ea6f8b44a8efd4b083cb8ec84dee3
 
 stream = ExtResource( 6 )
 volume_db = 0.0
@@ -120,6 +91,18 @@ volume_db = 0.0
 autoplay = false
 mix_target = 0
 bus = "Master"
->>>>>>> c9e22de575b8aa7af07ae0ae8f404e3ac669b5b3
+
+[node name="Greenfist" type="Sprite" parent="Hulk" index="9"]
+
+position = Vector2( 0.440125, -21.5662 )
+texture = ExtResource( 10 )
+
+[node name="special" type="AudioStreamPlayer" parent="Hulk" index="10"]
+
+stream = ExtResource( 11 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 

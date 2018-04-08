@@ -12,6 +12,7 @@ func _ready():
 	pass
 	
 func special():
+	get_node("./special").play(0)
 	timeOfLastSpecial = OS.get_ticks_msec()
 	for thing in get_node(".").get_parent().get_parent().get_children():
 		for thing2 in thing.get_children():

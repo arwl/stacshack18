@@ -18,6 +18,7 @@ func _process(delta):
 		greenFist.hide()
 
 func special():
+	get_node("./special").play(0)
 	timeOfLastSpecial = OS.get_ticks_msec()
 	greenFist.show()
 	for collider in get_node("MeleeAoE").get_overlapping_bodies():

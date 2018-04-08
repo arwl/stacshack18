@@ -32,10 +32,10 @@ func _process(delta):
 		fist.hide()
 
 	motion(delta)
-	
+
 	if Input.is_joy_button_pressed(PlayerNo, 5) && OS.get_ticks_msec() - timeOfLastMelee > MeleeCooldown:
 		attack()
-		
+
 	if Input.is_joy_button_pressed(PlayerNo, 4) && OS.get_ticks_msec() - timeOfLastSpecial > SpecialCooldown:
 		special()
 
@@ -85,12 +85,8 @@ func attack():
 func hit(direction, knockback, damage):
 	move_and_collide(direction * knockback)
 	health -= damage
-<<<<<<< HEAD
-	#emit_signal("health_changed", health)
 	get_node("./GUI").update_health(health)
-=======
 	Input.start_joy_vibration(PlayerNo, 1, 1, 0.1)
->>>>>>> 57f85f75e33ea6f8b44a8efd4b083cb8ec84dee3
 
 func set_player_no(playerNo):
 	PlayerNo = playerNo

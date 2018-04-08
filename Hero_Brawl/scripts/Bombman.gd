@@ -17,6 +17,7 @@ func _process(delta):
 		speed = 100
 
 func special():
+	get_node("./special").play(0)
 	timeOfLastSpecial = OS.get_ticks_msec()
 	speed = 200
 	

@@ -27,7 +27,6 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision" ]
 speed = 100
 health = 100
 MeleeCooldown = 250
