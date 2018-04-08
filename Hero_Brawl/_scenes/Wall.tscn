@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://textures/cage.png" type="Texture" id=1]
+[ext_resource path="res://textures/boulder.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="WallObject" type="Node2D"]
+[node name="WallObject" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
 

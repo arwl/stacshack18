@@ -12,7 +12,9 @@ extents = Vector2( 10, 10 )
 
 [node name="HulkNode" type="Node2D"]
 
-[node name="Hulk" type="KinematicBody2D" parent="." index="0"]
+[node name="Hulk" type="KinematicBody2D" parent="." index="0" groups=[
+"Heroes",
+]]
 
 input_pickable = false
 collision_layer = 1
@@ -22,6 +24,7 @@ script = ExtResource( 1 )
 speed = 100
 health = 100
 MeleeCooldown = 250
+SpecialCooldown = 250
 Knockback = 15
 Damage = 20
 PlayerNo = 0
@@ -30,9 +33,7 @@ PlayerNo = 0
 
 shape = SubResource( 1 )
 
-[node name="smash" type="Sprite" parent="Hulk" index="1" groups=[
-"Heroes",
-]]
+[node name="smash" type="Sprite" parent="Hulk" index="1"]
 
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]

@@ -24,6 +24,7 @@ script = ExtResource( 1 )
 speed = 100
 health = 100
 MeleeCooldown = 250
+SpecialCooldown = 250
 Knockback = 15
 Damage = 20
 PlayerNo = 0

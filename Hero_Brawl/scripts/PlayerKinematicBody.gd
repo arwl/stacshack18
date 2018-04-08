@@ -4,10 +4,12 @@ extends KinematicBody2D
 export var speed = 100
 export var health = 100
 export var MeleeCooldown = 250
+export var SpecialCooldown = 250
 export var Knockback = 15
 export var Damage = 20
 
 var timeOfLastMelee = 0
+var timeOfLastSpecial = 0
 export var PlayerNo = 0
 
 onready var fist = get_node("Fist")
@@ -24,8 +26,12 @@ func _process(delta):
 		fist.hide()
 
 	motion(delta)
+	
 	if Input.is_joy_button_pressed(PlayerNo, 5) && OS.get_ticks_msec() - timeOfLastMelee > MeleeCooldown:
 		attack()
+		
+	if Input.is_joy_button_pressed(PlayerNo, 4) && OS.get_ticks_msec() - timeOfLastSpecial > SpecialCooldown:
+		special()
 
 	if (health <= 0):
 		print("ded")
@@ -68,9 +74,6 @@ func hit(direction, knockback, damage):
 
 func set_player_no(playerNo):
 	PlayerNo = playerNo
-
-func attack():
-	pass
 
 func special():
 	pass

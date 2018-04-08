@@ -13,3 +13,13 @@ func _ready():
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
+
+func special():
+	timeOfLastSpecial = OS.get_ticks_msec()
+	
+	var fireballScene = load("res://_scenes/Fireball.tscn")
+	var fireball = fireballScene.instance()
+	fireball.direction = -1 * Vector2(-sin(rotation), cos(rotation))
+	fireball.position = position + fireball.direction * 20
+
+	get_node('.').get_parent().add_child(fireball)

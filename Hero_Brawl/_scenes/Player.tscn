@@ -10,7 +10,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]
 
@@ -22,6 +22,7 @@ script = ExtResource( 1 )
 speed = 100
 health = 100
 MeleeCooldown = 250
+SpecialCooldown = 250
 Knockback = 15
 Damage = 20
 PlayerNo = 0
