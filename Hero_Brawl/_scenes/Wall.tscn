@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://textures/rock.png" type="Texture" id=1]
+[ext_resource path="res://textures/cage.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -13,13 +13,12 @@ _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index"
 
 [node name="rock" type="Sprite" parent="." index="0"]
 
-scale = Vector2( 0.025, 0.025 )
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="rock" index="0"]
 
-scale = Vector2( 45.4545, 45.4545 )
+scale = Vector2( 1.17185, 1.17185 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1

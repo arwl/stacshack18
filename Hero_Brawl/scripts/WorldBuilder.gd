@@ -18,7 +18,7 @@ func _ready():
 func setup_board():
 	#loac_map("meadow")
 	place_ext_walls(480, 24)
-	place_players(1, 120, 600)
+	place_players(2, 120, 600)
 	#place_walls(64)
 	#place_wall_length(20, 20, 3, "h")
 	place_random_wall_lengths(16, 16)
@@ -35,25 +35,27 @@ func place_players(numPlayers, leftEdge, rightEdge):
 	# number of players should be between 1 and 4
 	match (numPlayers):
 		4:
-			place_player(rightEdge-40, rightEdge-40, "Hulk")
-			place_player(leftEdge+40, rightEdge-40, "Ghost")
-			place_player(rightEdge-40, leftEdge+40, "Bombman")
-			place_player(leftEdge+40, leftEdge+40, "Fireboy")
+			place_player(rightEdge-40, rightEdge-40, "Hulk", 3)
+			place_player(leftEdge+40, rightEdge-40, "Ghost", 2)
+			place_player(rightEdge-40, leftEdge+40, "Bombman", 1)
+			place_player(leftEdge+40, leftEdge+40, "Fireboy", 0)
 		3:
-			place_player(leftEdge+40, rightEdge-40, "Player")
-			place_player(rightEdge-40, leftEdge+40, "Player")
-			place_player(leftEdge+40, leftEdge+40, "Player")
+			place_player(leftEdge+40, rightEdge-40, "Player", 2)
+			place_player(rightEdge-40, leftEdge+40, "Player", 1)
+			place_player(leftEdge+40, leftEdge+40, "Player", 0)
 		2:
-			place_player(rightEdge-40, leftEdge+40, "Player")
-			place_player(leftEdge+40, rightEdge-40, "Player")
+			place_player(rightEdge-40, leftEdge+40, "Ghost", 1)
+			place_player(leftEdge+40, rightEdge-40, "Ghost", 0)
 		1:
-			place_player(leftEdge+40, leftEdge+40, "Ghost")
+			place_player(leftEdge+40, leftEdge+40, "Ghost", 0)
 		_:
 			print("invalid number of players. should be between 1 and 4")
 
-func place_player(x, y, character):
+func place_player(x, y, character, playerNo):
 	var playerScene = load("res://_scenes/" + character + ".tscn")
-	var player = playerScene.instance()
+	var player = playerScene.instance() 
+	var playerBody = player.get_children()[0]
+	playerBody.PlayerNo = playerNo
 	player.translate(Vector2(x,y))
 	get_node(".").call_deferred("add_child", player)
 

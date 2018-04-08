@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/Ghost.gd" type="Script" id=1]
 [ext_resource path="res://textures/ghost.png" type="Texture" id=2]
+[ext_resource path="res://_scenes/MeleeAoE.tscn" type="PackedScene" id=3]
+[ext_resource path="res://_scenes/Fist.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -10,19 +12,21 @@ extents = Vector2( 10, 10 )
 
 [node name="GhostNode" type="Node2D"]
 
-[node name="Ghost" type="KinematicBody2D" parent="." index="0"]
+[node name="Ghost" type="KinematicBody2D" parent="." index="0" groups=[
+"Heroes",
+]]
 
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-PlayerAccel = 100
-PlayerAccelDrag = 0.5
-PlayerTurn = 0.1
-PlayerTurnDrag = 0.1
-speed = 50
+speed = 100
 health = 100
+MeleeCooldown = 250
+Knockback = 15
+Damage = 20
+PlayerNo = 0
 
 [node name="ghost" type="Sprite" parent="Ghost" index="0"]
 
@@ -32,5 +36,11 @@ _sections_unfolded = [ "Transform" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ghost" index="1"]
 
 shape = SubResource( 1 )
+
+[node name="MeleeAoE" parent="Ghost" index="2" instance=ExtResource( 3 )]
+
+scale = Vector2( 0.339668, 0.339668 )
+
+[node name="Fist" parent="Ghost" index="3" instance=ExtResource( 4 )]
 
 
