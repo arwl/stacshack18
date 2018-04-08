@@ -1,13 +1,14 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scripts/Hulk.gd" type="Script" id=1]
-[ext_resource path="res://textures/smash.png" type="Texture" id=2]
-[ext_resource path="res://_scenes/MeleeAoE.tscn" type="PackedScene" id=3]
-[ext_resource path="res://_scenes/Fist.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Sound Effects/attackNoise1.wav" type="AudioStream" id=5]
-[ext_resource path="res://Sound Effects/attackNoise2.wav" type="AudioStream" id=6]
-[ext_resource path="res://Sound Effects/attackNoise3.wav" type="AudioStream" id=7]
-[ext_resource path="res://Sound Effects/deathnoise4.wav" type="AudioStream" id=8]
+[ext_resource path="res://_scenes/GUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://textures/smash.png" type="Texture" id=3]
+[ext_resource path="res://_scenes/MeleeAoE.tscn" type="PackedScene" id=4]
+[ext_resource path="res://_scenes/Fist.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Sound Effects/attackNoise1.wav" type="AudioStream" id=6]
+[ext_resource path="res://Sound Effects/attackNoise2.wav" type="AudioStream" id=7]
+[ext_resource path="res://Sound Effects/attackNoise3.wav" type="AudioStream" id=8]
+[ext_resource path="res://Sound Effects/deathnoise4.wav" type="AudioStream" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -33,30 +34,29 @@ Knockback = 15
 Damage = 20
 PlayerNo = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hulk" index="0"]
+[node name="GUI" parent="Hulk" index="0" instance=ExtResource( 2 )]
+
+margin_left = -68.0
+margin_top = -9.0
+margin_right = 4.0
+margin_bottom = 128.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hulk" index="1"]
 
 shape = SubResource( 1 )
 
-[node name="smash" type="Sprite" parent="Hulk" index="1"]
+[node name="smash" type="Sprite" parent="Hulk" index="2"]
 
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="MeleeAoE" parent="Hulk" index="2" instance=ExtResource( 3 )]
+[node name="MeleeAoE" parent="Hulk" index="3" instance=ExtResource( 4 )]
 
 scale = Vector2( 0.377405, 0.377405 )
 
-[node name="Fist" parent="Hulk" index="3" instance=ExtResource( 4 )]
+[node name="Fist" parent="Hulk" index="4" instance=ExtResource( 5 )]
 
-[node name="attack1" type="AudioStreamPlayer" parent="Hulk" index="4"]
-
-stream = ExtResource( 5 )
-volume_db = 0.0
-autoplay = false
-mix_target = 0
-bus = "Master"
-
-[node name="attack2" type="AudioStreamPlayer" parent="Hulk" index="5"]
+[node name="attack1" type="AudioStreamPlayer" parent="Hulk" index="5"]
 
 stream = ExtResource( 6 )
 volume_db = 0.0
@@ -64,7 +64,7 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="attack3" type="AudioStreamPlayer" parent="Hulk" index="6"]
+[node name="attack2" type="AudioStreamPlayer" parent="Hulk" index="6"]
 
 stream = ExtResource( 7 )
 volume_db = 0.0
@@ -72,9 +72,17 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="death" type="AudioStreamPlayer" parent="Hulk" index="7"]
+[node name="attack3" type="AudioStreamPlayer" parent="Hulk" index="7"]
 
 stream = ExtResource( 8 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="death" type="AudioStreamPlayer" parent="Hulk" index="8"]
+
+stream = ExtResource( 9 )
 volume_db = 0.0
 autoplay = false
 mix_target = 0

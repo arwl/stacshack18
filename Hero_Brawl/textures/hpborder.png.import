@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hpbar_fill.png-91397c032e1b78d21c464219b0ae81de.stex"
+path="res://.import/hpborder.png-a876be728629f5ee3fe71e1db629803a.stex"
 
 [deps]
 
-source_file="res://assets/hpbar_fill.png"
-source_md5="6c53bac658df0a6946bcc8bf1dc796df"
+source_file="res://textures/hpborder.png"
+source_md5="d94553be44a180ad16c4f6202bcfcefc"
 
-dest_files=[ "res://.import/hpbar_fill.png-91397c032e1b78d21c464219b0ae81de.stex" ]
-dest_md5="9974ee70fd527d506a4bb831bcb9f81e"
+dest_files=[ "res://.import/hpborder.png-a876be728629f5ee3fe71e1db629803a.stex" ]
+dest_md5="e3408c67145eccd6a91913f663eb8bf5"
 
 [params]
 

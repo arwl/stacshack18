@@ -1,12 +1,13 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripts/PlayerKinematicBody.gd" type="Script" id=1]
-[ext_resource path="res://textures/player.png" type="Texture" id=2]
-[ext_resource path="res://_scenes/MeleeAoE.tscn" type="PackedScene" id=3]
-[ext_resource path="res://_scenes/Fist.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Sound Effects/attackNoise1.wav" type="AudioStream" id=5]
-[ext_resource path="res://Sound Effects/attackNoise2.wav" type="AudioStream" id=6]
-[ext_resource path="res://Sound Effects/attackNoise3.wav" type="AudioStream" id=7]
+[ext_resource path="res://_scenes/GUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://textures/player.png" type="Texture" id=3]
+[ext_resource path="res://_scenes/MeleeAoE.tscn" type="PackedScene" id=4]
+[ext_resource path="res://_scenes/Fist.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Sound Effects/attackNoise1.wav" type="AudioStream" id=6]
+[ext_resource path="res://Sound Effects/attackNoise2.wav" type="AudioStream" id=7]
+[ext_resource path="res://Sound Effects/attackNoise3.wav" type="AudioStream" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -30,35 +31,34 @@ Knockback = 15
 Damage = 20
 PlayerNo = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D" index="0"]
+[node name="GUI" parent="KinematicBody2D" index="0" instance=ExtResource( 2 )]
+
+margin_left = -68.0
+margin_top = 10.0
+margin_right = 4.0
+margin_bottom = 147.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D" index="1"]
 
 scale = Vector2( 3.0623, 3.022 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="PlayerSprite" type="Sprite" parent="KinematicBody2D" index="1"]
+[node name="PlayerSprite" type="Sprite" parent="KinematicBody2D" index="2"]
 
 position = Vector2( -0.216446, -0.0486145 )
 scale = Vector2( 0.121655, 0.119934 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
-[node name="MeleeAoE" parent="KinematicBody2D" index="2" instance=ExtResource( 3 )]
+[node name="MeleeAoE" parent="KinematicBody2D" index="3" instance=ExtResource( 4 )]
 
-[node name="Fist" parent="KinematicBody2D" index="3" instance=ExtResource( 4 )]
+[node name="Fist" parent="KinematicBody2D" index="4" instance=ExtResource( 5 )]
 
 position = Vector2( 3.41373, -51.4362 )
 scale = Vector2( 2.62808, 2.62808 )
 
-[node name="attack1" type="AudioStreamPlayer" parent="KinematicBody2D" index="4"]
-
-stream = ExtResource( 5 )
-volume_db = 0.0
-autoplay = false
-mix_target = 0
-bus = "Master"
-
-[node name="attack2" type="AudioStreamPlayer" parent="KinematicBody2D" index="5"]
+[node name="attack1" type="AudioStreamPlayer" parent="KinematicBody2D" index="5"]
 
 stream = ExtResource( 6 )
 volume_db = 0.0
@@ -66,7 +66,7 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="attack3" type="AudioStreamPlayer" parent="KinematicBody2D" index="6"]
+[node name="attack2" type="AudioStreamPlayer" parent="KinematicBody2D" index="6"]
 
 stream = ExtResource( 7 )
 volume_db = 0.0
@@ -74,7 +74,15 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="death" type="AudioStreamPlayer" parent="KinematicBody2D" index="7"]
+[node name="attack3" type="AudioStreamPlayer" parent="KinematicBody2D" index="7"]
+
+stream = ExtResource( 8 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="death" type="AudioStreamPlayer" parent="KinematicBody2D" index="8"]
 
 stream = null
 volume_db = 0.0

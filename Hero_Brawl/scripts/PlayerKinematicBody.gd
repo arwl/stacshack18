@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+signal health_changed
+
 # Members
 export var speed = 100
 export var health = 100
@@ -8,6 +10,7 @@ export var SpecialCooldown = 250
 export var Knockback = 15
 export var Damage = 20
 
+var HPBar
 var timeOfLastMelee = 0
 var timeOfLastSpecial = 0
 export var PlayerNo = 0
@@ -80,6 +83,8 @@ func attack():
 func hit(direction, knockback, damage):
 	move_and_collide(direction * knockback)
 	health -= damage
+	#emit_signal("health_changed", health)
+	get_node("./GUI").update_health(health)
 
 func set_player_no(playerNo):
 	PlayerNo = playerNo
