@@ -9,15 +9,15 @@ extents = Vector2( 10, 10 )
 
 [node name="ExtWallNode" type="Node2D"]
 
-z_index = 1
-_sections_unfolded = [ "Z Index" ]
-
 [node name="ExtWall" type="Sprite" parent="." index="0"]
 
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="ExtWall" index="0"]
+[node name="StaticBody2D" type="StaticBody2D" parent="ExtWall" index="0" groups=[
+"Wall",
+"ExtWall",
+]]
 
 scale = Vector2( 0.385543, 0.385543 )
 input_pickable = false

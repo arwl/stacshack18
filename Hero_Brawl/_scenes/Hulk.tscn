@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/Hulk.gd" type="Script" id=1]
 [ext_resource path="res://textures/smash.png" type="Texture" id=2]
 [ext_resource path="res://_scenes/MeleeAoE.tscn" type="PackedScene" id=3]
 [ext_resource path="res://_scenes/Fist.tscn" type="PackedScene" id=4]
+[ext_resource path="res://textures/hulkhand.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -24,7 +25,9 @@ script = ExtResource( 1 )
 speed = 100
 health = 100
 MeleeCooldown = 250
+MeleeLength = 100
 SpecialCooldown = 250
+SpecialLength = 250
 Knockback = 15
 Damage = 20
 PlayerNo = 0
@@ -43,5 +46,10 @@ _sections_unfolded = [ "Transform" ]
 scale = Vector2( 0.377405, 0.377405 )
 
 [node name="Fist" parent="Hulk" index="3" instance=ExtResource( 4 )]
+
+[node name="Greenfist" type="Sprite" parent="Hulk" index="4"]
+
+position = Vector2( 0.642563, -21.7186 )
+texture = ExtResource( 5 )
 
 

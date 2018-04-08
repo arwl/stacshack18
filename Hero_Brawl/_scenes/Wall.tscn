@@ -7,9 +7,8 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="WallObject" type="Node2D" index="0"]
+[node name="WallObject" type="Node2D"]
 
-z_index = 1
 _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
 
 [node name="rock" type="Sprite" parent="." index="0"]
@@ -17,7 +16,9 @@ _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index"
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="rock" index="0"]
+[node name="StaticBody2D" type="StaticBody2D" parent="rock" index="0" groups=[
+"Wall",
+]]
 
 scale = Vector2( 1.17185, 1.17185 )
 input_pickable = false
@@ -27,7 +28,7 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="rock/StaticBody2D" index="0"]
 

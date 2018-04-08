@@ -4,7 +4,9 @@ extends KinematicBody2D
 export var speed = 100
 export var health = 100
 export var MeleeCooldown = 250
+export var MeleeLength = 100
 export var SpecialCooldown = 250
+export var SpecialLength = 250
 export var Knockback = 15
 export var Damage = 20
 
@@ -23,7 +25,7 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	if (OS.get_ticks_msec() - timeOfLastMelee > MeleeCooldown):
+	if (OS.get_ticks_msec() - timeOfLastMelee > MeleeLength):
 		fist.hide()
 
 	motion(delta)
@@ -74,6 +76,7 @@ func attack():
 func hit(direction, knockback, damage):
 	move_and_collide(direction * knockback)
 	health -= damage
+	Input.start_joy_vibration(PlayerNo, 1, 1, 0.1)
 
 func set_player_no(playerNo):
 	PlayerNo = playerNo
