@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ghostSpecialMove.wav-d08f81c87810a7dbc91ec181187ae1f0.sample"
+
+[deps]
+
+source_file="res://Sound Effects/ghostSpecialMove.wav"
+source_md5="5175cdbf9f7c128f0381e9eda1c284d1"
+
+dest_files=[ "res://.import/ghostSpecialMove.wav-d08f81c87810a7dbc91ec181187ae1f0.sample" ]
+dest_md5="c1a4dea77c0459477eef62d676480891"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

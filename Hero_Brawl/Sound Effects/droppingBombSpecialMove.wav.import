@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/droppingBombSpecialMove.wav-6a10c5be2775c4a9aaeb108cf1a94b68.sample"
+
+[deps]
+
+source_file="res://Sound Effects/droppingBombSpecialMove.wav"
+source_md5="d5f236278cc1eb7d126e1bdf256a2de4"
+
+dest_files=[ "res://.import/droppingBombSpecialMove.wav-6a10c5be2775c4a9aaeb108cf1a94b68.sample" ]
+dest_md5="a3d64adf092e841a71c8a99a90b88d4b"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

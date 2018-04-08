@@ -4,6 +4,11 @@ extends Node2D
 # var a = 2
 # var b = "textvar"
 
+var p1char = "Ghost"
+var p2char = "Hulk"
+var p3char = "Fireboy"
+var p4char = "Bombman"
+
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
@@ -18,42 +23,42 @@ func _ready():
 func setup_board():
 	#loac_map("meadow")
 	place_ext_walls(480, 24)
-	place_players(2, 120, 600)
+	place_players(4, 120, 600)
 	#place_walls(64)
 	#place_wall_length(20, 20, 3, "h")
 	place_random_wall_lengths(16, 16)
-	
+
 
 func load_map(mapName):
 	var mapScene = load("res://_scenes/" + mapName + ".tscn")
 	var map = mapScene.instance()
 	map.translate(Vector2(0,0))
 	get_node(".").call_deferred("add_child", map)
-	
+
 
 func place_players(numPlayers, leftEdge, rightEdge):
 	# number of players should be between 1 and 4
 	match (numPlayers):
 		4:
-			place_player(rightEdge-40, rightEdge-40, "Hulk", 3)
-			place_player(leftEdge+40, rightEdge-40, "Ghost", 2)
-			place_player(rightEdge-40, leftEdge+40, "Bombman", 1)
-			place_player(leftEdge+40, leftEdge+40, "Fireboy", 0)
+			place_player(rightEdge-40, rightEdge-40, global.p4Char, 3)
+			place_player(leftEdge+40, rightEdge-40, global.p3Char, 2)
+			place_player(rightEdge-40, leftEdge+40, global.p2Char, 1)
+			place_player(leftEdge+40, leftEdge+40, global.p1Char, 0)
 		3:
-			place_player(leftEdge+40, rightEdge-40, "Player", 2)
-			place_player(rightEdge-40, leftEdge+40, "Player", 1)
-			place_player(leftEdge+40, leftEdge+40, "Player", 0)
+			place_player(leftEdge+40, rightEdge-40, global.p3Char, 2)
+			place_player(rightEdge-40, leftEdge+40, global.p2Char, 1)
+			place_player(leftEdge+40, leftEdge+40, global.p1Char, 0)
 		2:
-			place_player(rightEdge-40, leftEdge+40, "Ghost", 1)
-			place_player(leftEdge+40, rightEdge-40, "Ghost", 0)
+			place_player(rightEdge-40, leftEdge+40, global.p2Char, 1)
+			place_player(leftEdge+40, rightEdge-40, global.p1Char, 0)
 		1:
-			place_player(leftEdge+40, leftEdge+40, "Ghost", 0)
+			place_player(leftEdge+40, leftEdge+40, global.p1Char, 0)
 		_:
 			print("invalid number of players. should be between 1 and 4")
 
 func place_player(x, y, character, playerNo):
 	var playerScene = load("res://_scenes/" + character + ".tscn")
-	var player = playerScene.instance() 
+	var player = playerScene.instance()
 	var playerBody = player.get_children()[0]
 	playerBody.PlayerNo = playerNo
 	player.translate(Vector2(x,y))
@@ -114,3 +119,6 @@ func place_walls(numWalls):
 		randomize()
 		place_wall(rand_range(128, 592), rand_range(128,592), "obstacle")
 		#place_wall(randi()%468+128, randi()%468+128, "obstacle")
+
+func setP1Char(character):
+	p1char = character

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/finale.wav-cb28e860439ec3661401cdc9f2068b33.sample"
+
+[deps]
+
+source_file="res://Sound Effects/finale.wav"
+source_md5="80c786e8980f4bd5b04291ffcd9e0876"
+
+dest_files=[ "res://.import/finale.wav-cb28e860439ec3661401cdc9f2068b33.sample" ]
+dest_md5="fd8579ecfb9a2d1f37396d5ddd00e2a0"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

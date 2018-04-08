@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/deathnoise3.wav-5ca717c544ebd52f9466a3bbe1554af0.sample"
+
+[deps]
+
+source_file="res://Sound Effects/deathnoise3.wav"
+source_md5="d4729d806773c01153c75ac58bca7f80"
+
+dest_files=[ "res://.import/deathnoise3.wav-5ca717c544ebd52f9466a3bbe1554af0.sample" ]
+dest_md5="d709e43b78a6097e2ba7fba1394ece31"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

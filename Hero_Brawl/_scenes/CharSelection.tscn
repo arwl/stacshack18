@@ -1,0 +1,143 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scripts/SelectFireChar.gd" type="Script" id=1]
+[ext_resource path="res://textures/fire.png" type="Texture" id=2]
+[ext_resource path="res://scripts/SelectGhostChar.gd" type="Script" id=3]
+[ext_resource path="res://textures/ghost.png" type="Texture" id=4]
+[ext_resource path="res://scripts/SelectHulkChar.gd" type="Script" id=5]
+[ext_resource path="res://textures/smash.png" type="Texture" id=6]
+[ext_resource path="res://scripts/SelectBombChar.gd" type="Script" id=7]
+[ext_resource path="res://textures/bomb.png" type="Texture" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="Node2D" type="Node2D"]
+
+scale = Vector2( 1.5, 1.5 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="fireArea" type="Area2D" parent="." index="0"]
+
+position = Vector2( 10, 12 )
+scale = Vector2( 0.35, 0.35 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="fireSprite" type="Sprite" parent="fireArea" index="0"]
+
+position = Vector2( -0.499857, 0.219563 )
+scale = Vector2( 2.85714, 2.85714 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fireArea" index="1"]
+
+scale = Vector2( 3.30326, 3.30326 )
+shape = SubResource( 1 )
+
+[node name="ghostArea" type="Area2D" parent="." index="1"]
+
+position = Vector2( 34, 12 )
+scale = Vector2( 0.35, 0.35 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="ghost" type="Sprite" parent="ghostArea" index="0"]
+
+position = Vector2( -2.31821, -0.0801659 )
+scale = Vector2( 2.85714, 2.85714 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ghostArea" index="1"]
+
+scale = Vector2( 3.30326, 3.30326 )
+shape = SubResource( 2 )
+
+[node name="smashArea" type="Area2D" parent="." index="2"]
+
+position = Vector2( 59, 12 )
+scale = Vector2( 0.35, 0.35 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="smash" type="Sprite" parent="smashArea" index="0"]
+
+position = Vector2( -1.61896, 2.0777 )
+scale = Vector2( 2.85714, 2.85714 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="smashArea" index="1"]
+
+scale = Vector2( 3.30326, 3.30326 )
+shape = SubResource( 3 )
+
+[node name="bombArea" type="Area2D" parent="." index="3"]
+
+position = Vector2( 82.5, 12 )
+scale = Vector2( 0.35, 0.35 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 7 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bomb" type="Sprite" parent="bombArea" index="0"]
+
+position = Vector2( -0.19046, -0.200012 )
+scale = Vector2( 2.85714, 2.85714 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bombArea" index="1"]
+
+scale = Vector2( 3.30326, 3.30326 )
+shape = SubResource( 4 )
+
+[node name="fire2" type="Sprite" parent="." index="4"]
+
+position = Vector2( 46, -29.5 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+

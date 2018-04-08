@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/fireSpecialMove.wav-31f43158273d32ba893d36671da58b7b.sample"
+
+[deps]
+
+source_file="res://Sound Effects/fireSpecialMove.wav"
+source_md5="d95ed4d7c40bb9ce6d4a6bb9ad4096d2"
+
+dest_files=[ "res://.import/fireSpecialMove.wav-31f43158273d32ba893d36671da58b7b.sample" ]
+dest_md5="4c82d5d9298a9f36a7a22fa539e08e88"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

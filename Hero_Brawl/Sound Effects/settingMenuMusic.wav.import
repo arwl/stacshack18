@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/settingMenuMusic.wav-46e5f37d0ff94c7ec8c0e5b6c75abf32.sample"
+
+[deps]
+
+source_file="res://Sound Effects/settingMenuMusic.wav"
+source_md5="5e5706ff1e430e32c2448f2acc668969"
+
+dest_files=[ "res://.import/settingMenuMusic.wav-46e5f37d0ff94c7ec8c0e5b6c75abf32.sample" ]
+dest_md5="81aff122f0ee0a47c05d471c8187f1a0"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/imBack.wav-b6ef8280d0de5f4f859f4e7a2cea4fa6.sample"
+
+[deps]
+
+source_file="res://Sound Effects/imBack.wav"
+source_md5="353f23f78bfdd2034bcf0cc7cef7b11d"
+
+dest_files=[ "res://.import/imBack.wav-b6ef8280d0de5f4f859f4e7a2cea4fa6.sample" ]
+dest_md5="500ec75085fa3f4158615849ac2411e8"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
