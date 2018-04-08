@@ -134,10 +134,29 @@ texture = ExtResource( 8 )
 scale = Vector2( 3.30326, 3.30326 )
 shape = SubResource( 4 )
 
-[node name="fire2" type="Sprite" parent="." index="4"]
+[node name="ghostSelected" type="Sprite" parent="." index="4"]
 
+visible = false
+position = Vector2( 45.8573, -30.1445 )
+texture = ExtResource( 4 )
+
+[node name="fireSelected" type="Sprite" parent="." index="5"]
+
+visible = false
 position = Vector2( 46, -29.5 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="bombSelected" type="Sprite" parent="." index="6"]
+
+visible = false
+position = Vector2( 45.9851, -29.378 )
+texture = ExtResource( 8 )
+
+[node name="hulkSelected" type="Sprite" parent="." index="7"]
+
+visible = false
+position = Vector2( 45.9834, -29.3601 )
+texture = ExtResource( 6 )
 
 

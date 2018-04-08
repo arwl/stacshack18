@@ -10,6 +10,8 @@ var p2Char = "Hulk"
 var p3Char = "Fireboy"
 var p4Char = "Bombman"
 
+var numPlayers
+
 # Functions to set the character values
 func setP1Char(charName):
 	p1Char = charName

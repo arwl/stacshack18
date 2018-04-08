@@ -1,4 +1,4 @@
-extends "res://scripts/PlayerKinematicBody.gd"
+extends Area2D
 
 # class member variables go here, for example:
 # var a = 2
@@ -7,15 +7,13 @@ extends "res://scripts/PlayerKinematicBody.gd"
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
-	special()
+	set_process_input(true)
 	pass
 
-var old_shape = null
-
-func special():
-	old_shape = get_node('./CollisionShape2D')
-	get_node(".").remove_child(get_node("./CollisionShape2D"))
-	
+func _input_event(viewport, event, shape_idx):
+	if (event.is_pressed()):
+		print("start")
+		get_tree().change_scene("res://_scenes/MainMenu.tscn")
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
