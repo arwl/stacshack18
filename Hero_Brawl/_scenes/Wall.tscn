@@ -9,6 +9,7 @@ extents = Vector2( 10, 10 )
 
 [node name="WallObject" type="Node2D"]
 
+z_index = 1
 _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
 
 [node name="rock" type="Sprite" parent="." index="0"]

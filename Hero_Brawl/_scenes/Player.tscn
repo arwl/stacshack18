@@ -10,7 +10,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]
 

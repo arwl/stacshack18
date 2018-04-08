@@ -11,6 +11,7 @@ var p3Char = "Fireboy"
 var p4Char = "Bombman"
 
 var numPlayers
+var playersAlive = 4
 
 # Functions to set the character values
 func setP1Char(charName):
@@ -30,7 +31,9 @@ func _ready():
 	# Initialization here
 	pass
 
-#func _process(delta):
+func _process(delta):
+	if (playersAlive == 1):
+		print("winner winner")
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
