@@ -26,6 +26,10 @@ func setP3Char(charName):
 func setP4Char(charName):
 	p4Char = charName
 
+func playDeathSound(number):
+	var deathSounds = load("res://_scenes/DeathSounds.tscn").instance()
+	deathSounds.get_child(0).play(0)
+
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here

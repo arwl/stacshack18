@@ -6,7 +6,7 @@
 [ext_resource path="res://textures/logo.png" type="Texture" id=4]
 [ext_resource path="res://Sound Effects/mainMenuMusic.wav" type="AudioStream" id=5]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 [node name="menu_bg" type="Sprite" parent="." index="0"]
 

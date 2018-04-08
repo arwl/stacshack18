@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/zoom.wav-478b7e8d665ca6b582c739ca00f9a96a.sample"
+
+[deps]
+
+source_file="res://Sound Effects/zoom.wav"
+source_md5="284159b4900ca1233ab77cf6cbec7048"
+
+dest_files=[ "res://.import/zoom.wav-478b7e8d665ca6b582c739ca00f9a96a.sample" ]
+dest_md5="ab92c52248db66c2654d1041065b8943"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

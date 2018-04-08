@@ -35,7 +35,9 @@ func _process(delta):
 		special()
 
 	if (health <= 0):
+		#get_node("./death").get_parent().remove_child(get_node("./death")).play(0)
 		get_node(".").get_parent().remove_child(get_node("."))
+		global.playDeathSound(1)
 		global.playersAlive -= 1
 		print("ded")
 
@@ -65,6 +67,10 @@ func deadzone(lr, ud):
 	return (lr * lr + ud * ud) > 0.1
 
 func attack():
+	var soundClip
+	randomize()
+	soundClip = int(rand_range(1,4))
+	get_node("./attack" + str(soundClip)).play(0)
 	fist.show()
 	timeOfLastMelee = OS.get_ticks_msec()
 	for collider in get_node("MeleeAoE").get_overlapping_bodies():
